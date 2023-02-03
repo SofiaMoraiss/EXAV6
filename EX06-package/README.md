@@ -36,14 +36,14 @@ Saída:
 
 Entrada:
  
-    mamao
-    brocolis
-    .
+mamao
+brocolis
+.
 
 Saída:
 
-    brocolis
-    mamaos
+brocolis
+mamaos
 
 -----------
 
@@ -56,9 +56,9 @@ pao
 
 Saída:
 
-    cafe
-    leite
-    pao
+cafe
+leite
+pao
 
 -----------
 
@@ -75,12 +75,12 @@ farinha
 
 Saída:
 
-    arroz
-    farinha
-    feijao
-    leite
-    maca
-    pao
-    queijo
+arroz
+farinha
+feijao
+leite
+maca
+pao
+queijo
 
 -----------

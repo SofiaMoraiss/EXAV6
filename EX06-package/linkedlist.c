@@ -73,7 +73,6 @@ void * list_get_left(LinkedList *lst)
 void list_print(LinkedList *lst)
 {
     Node *it = lst->head;
-    printf("LISTA:");
     while (it != NULL)
     {
         printf("%s\n", (char*)it->value);
@@ -158,6 +157,7 @@ void list_add_sorted(LinkedList *lst, void * value)
 void list_sort(LinkedList *lst, int compare(void *, void *))
 {
     Node *temp = lst->head;
+    Node *headInicial = lst->head;
     Node* temp_next = temp->next;
     void * aux;
     int cont=1;
@@ -169,8 +169,7 @@ void list_sort(LinkedList *lst, int compare(void *, void *))
             if (temp_next==NULL){
                 break;
             }
-            printf("1: %s 2: %s\n", (char*)temp->value, (char*)temp_next->value);
-            if (compare(temp->value, temp_next->value)<0){ // se a segunda vier primeiro no alfabeto
+            if (compare(temp->value, temp_next->value)>0){ // se a segunda vier primeiro no alfabeto
                 aux= temp->value;
                 temp->value=temp->next->value;
                 temp->next->value=aux;
@@ -178,7 +177,7 @@ void list_sort(LinkedList *lst, int compare(void *, void *))
             }
             temp = temp_next;
         }
-        list_print(lst);
+        temp=headInicial;
     }
 }
 
